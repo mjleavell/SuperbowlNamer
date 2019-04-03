@@ -19,5 +19,20 @@ namespace SuperbowlNamer.Tests
             // Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void convert_5_to_v()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 5;
+            var expectedResult = "V";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }

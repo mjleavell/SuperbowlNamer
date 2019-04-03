@@ -10,6 +10,16 @@ namespace SuperbowlNamer
         {
             var romanNumeral = "";
 
+            if (numberToConvert >= 4)
+            {
+                romanNumeral = "IV" + ToRomanNumeral(numberToConvert - 4);
+            }
+
+            if (numberToConvert >= 5)
+            {
+                romanNumeral = "V" + ToRomanNumeral(numberToConvert - 5);
+            }
+
             if (numberToConvert < 4)
             {
 
