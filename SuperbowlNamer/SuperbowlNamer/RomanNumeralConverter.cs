@@ -6,9 +6,22 @@ namespace SuperbowlNamer
 {
     public class RomanNumeralConverter
     {
-        public string ConvertToRomanNumeral(int numberToConvert)
+        public string ToRomanNumeral(int numberToConvert)
         {
-            return "III";
+            var romanNumeral = "";
+
+            if (numberToConvert < 4)
+            {
+
+                for (int i = 0; i < numberToConvert; i++)
+                {
+                    romanNumeral += "I";
+                }
+
+            }
+
+            return romanNumeral;
+
         }
     }
 }

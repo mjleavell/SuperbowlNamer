@@ -10,10 +10,11 @@ namespace SuperbowlNamer.Tests
         {
             // Arrange
             var converter = new RomanNumeralConverter();
-            var input = 3;
-            var expectedResult = "III";
+            var input = 1;
+            var expectedResult = "I";
+
             // Act
-            var actualResult = converter.ConvertToRomanNumeral(input);
+            var actualResult = converter.ToRomanNumeral(input);
 
             // Assert
             Assert.Equal(expectedResult, actualResult);
