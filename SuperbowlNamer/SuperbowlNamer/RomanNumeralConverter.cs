@@ -8,15 +8,6 @@ namespace SuperbowlNamer
     {
         public string ToRomanNumeral(int numberToConvert)
         {
-            //var romanNumeral = "";
-            //if ((numberToConvert < 0) || (numberToConvert > 3999)) throw new ArgumentOutOfRangeException("Value must be between 1 and 3999");
-            //if (numberToConvert < 1) return string.Empty;
-
-            //if (numberToConvert < 1)
-            //{
-            //    return string.Empty;
-            //}
-
             if (numberToConvert >= 10)
             {
                 return "X" + ToRomanNumeral(numberToConvert - 10);
@@ -44,7 +35,6 @@ namespace SuperbowlNamer
             
             return string.Empty;
 
-            //return romanNumeral;
         }
     }
 }
