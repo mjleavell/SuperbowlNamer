@@ -34,5 +34,65 @@ namespace SuperbowlNamer.Tests
             // Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void convert_9_to_ix()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 9;
+            var expectedResult = "IX";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_12_to_xii()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 12;
+            var expectedResult = "XII";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_16_to_xvi()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 16;
+            var expectedResult = "XVI";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_29_to_xxix()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 29;
+            var expectedResult = "XXIX";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }

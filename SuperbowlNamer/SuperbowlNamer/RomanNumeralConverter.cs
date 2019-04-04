@@ -8,29 +8,32 @@ namespace SuperbowlNamer
     {
         public string ToRomanNumeral(int numberToConvert)
         {
-            var romanNumeral = "";
-
-            if (numberToConvert >= 4)
+            if (numberToConvert >= 10)
             {
-                romanNumeral = "IV" + ToRomanNumeral(numberToConvert - 4);
+                return "X" + ToRomanNumeral(numberToConvert - 10);
+            }
+
+            if (numberToConvert >= 9)
+            {
+                return "IX" + ToRomanNumeral(numberToConvert - 9);
             }
 
             if (numberToConvert >= 5)
             {
-                romanNumeral = "V" + ToRomanNumeral(numberToConvert - 5);
+                return "V" + ToRomanNumeral(numberToConvert - 5);
             }
 
-            if (numberToConvert < 4)
+            if (numberToConvert >= 4)
             {
-
-                for (int i = 0; i < numberToConvert; i++)
-                {
-                    romanNumeral += "I";
-                }
-
+                return "IV" + ToRomanNumeral(numberToConvert - 4);
             }
 
-            return romanNumeral;
+            if (numberToConvert >= 1)
+            {
+                return "I" + ToRomanNumeral(numberToConvert - 1);
+            }
+            
+            return string.Empty;
 
         }
     }
