@@ -18,16 +18,19 @@ namespace SuperbowlNamer
                 return "CD" + ToRomanNumeral(numberToConvert - 400);
             }
 
+            if (numberToConvert >= 100)
+            {
+                return "C" + ToRomanNumeral(numberToConvert - 100);
+            }
+
             if (numberToConvert >= 90)
             {
                 return "XC" + ToRomanNumeral(numberToConvert - 90);
-
             }
 
             if (numberToConvert >= 50)
             {
                 return "L" + ToRomanNumeral(numberToConvert - 50);
-
             }
 
             if (numberToConvert >= 40)

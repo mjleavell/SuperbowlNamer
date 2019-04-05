@@ -229,5 +229,20 @@ namespace SuperbowlNamer.Tests
             // Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void convert_649_to_dcxlix()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 649;
+            var expectedResult = "DCXLIX";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
