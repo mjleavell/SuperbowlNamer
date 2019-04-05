@@ -94,5 +94,36 @@ namespace SuperbowlNamer.Tests
             // Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void convert_44_to_xliv()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 44;
+            var expectedResult = "XLIV";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+
+        [Fact]
+        public void convert_45_to_xlv()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 45;
+            var expectedResult = "XLV";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
