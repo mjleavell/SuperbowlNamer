@@ -110,7 +110,6 @@ namespace SuperbowlNamer.Tests
             Assert.Equal(expectedResult, actualResult);
         }
 
-
         [Fact]
         public void convert_45_to_xlv()
         {
@@ -118,6 +117,21 @@ namespace SuperbowlNamer.Tests
             var converter = new RomanNumeralConverter();
             var input = 45;
             var expectedResult = "XLV";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_68_to_lxviii()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 68;
+            var expectedResult = "LXVIII";
 
             // Act
             var actualResult = converter.ToRomanNumeral(input);
