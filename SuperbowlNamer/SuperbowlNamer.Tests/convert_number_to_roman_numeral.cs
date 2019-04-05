@@ -141,12 +141,27 @@ namespace SuperbowlNamer.Tests
         }
 
         [Fact]
-        public void convert_83_to_lxxiii()
+        public void convert_83_to_lxxxiii()
         {
             // Arrange
             var converter = new RomanNumeralConverter();
-            var input = 68;
-            var expectedResult = "LXVIII";
+            var input = 83;
+            var expectedResult = "LXXXIII";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_97_to_xcvii()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 97;
+            var expectedResult = "XCVII";
 
             // Act
             var actualResult = converter.ToRomanNumeral(input);

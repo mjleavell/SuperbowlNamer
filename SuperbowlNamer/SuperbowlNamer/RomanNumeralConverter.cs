@@ -8,6 +8,12 @@ namespace SuperbowlNamer
     {
         public string ToRomanNumeral(int numberToConvert)
         {
+            if (numberToConvert >= 90)
+            {
+                return "XC" + ToRomanNumeral(numberToConvert - 90);
+
+            }
+
             if (numberToConvert >= 50)
             {
                 return "L" + ToRomanNumeral(numberToConvert - 50);
