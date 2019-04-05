@@ -8,6 +8,11 @@ namespace SuperbowlNamer
     {
         public string ToRomanNumeral(int numberToConvert)
         {
+            if (numberToConvert >= 1000)
+            {
+                return "M" + ToRomanNumeral(numberToConvert - 1000);
+            }
+
             if (numberToConvert >= 900)
             {
                 return "CM" + ToRomanNumeral(numberToConvert - 900);
