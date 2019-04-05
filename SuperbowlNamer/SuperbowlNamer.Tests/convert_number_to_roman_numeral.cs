@@ -244,5 +244,65 @@ namespace SuperbowlNamer.Tests
             // Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void convert_798_to_dccxcviii()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 798;
+            var expectedResult = "DCCXCVIII";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_891_to_dcccxci()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 891;
+            var expectedResult = "DCCCXCI";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_999_to_dcccxci()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 999;
+            var expectedResult = "CMXCIX";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        //[Fact]
+        //public void convert_1000_to_M()
+        //{
+        //    // Arrange
+        //    var converter = new RomanNumeralConverter();
+        //    var input = 1000;
+        //    var expectedResult = "M";
+
+        //    // Act
+        //    var actualResult = converter.ToRomanNumeral(input);
+
+        //    // Assert
+        //    Assert.Equal(expectedResult, actualResult);
+        //}
     }
 }
