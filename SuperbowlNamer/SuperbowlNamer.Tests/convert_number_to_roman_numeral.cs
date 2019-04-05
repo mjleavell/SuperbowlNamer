@@ -110,7 +110,6 @@ namespace SuperbowlNamer.Tests
             Assert.Equal(expectedResult, actualResult);
         }
 
-
         [Fact]
         public void convert_45_to_xlv()
         {
@@ -118,6 +117,111 @@ namespace SuperbowlNamer.Tests
             var converter = new RomanNumeralConverter();
             var input = 45;
             var expectedResult = "XLV";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_68_to_lxviii()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 68;
+            var expectedResult = "LXVIII";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_83_to_lxxxiii()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 83;
+            var expectedResult = "LXXXIII";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_97_to_xcvii()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 97;
+            var expectedResult = "XCVII";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_99_to_xcix()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 99;
+            var expectedResult = "XCIX";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_498_to_cdxcviii()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 498;
+            var expectedResult = "CDXCVIII";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_500_to_d()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 500;
+            var expectedResult = "D";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_501_to_di()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 501;
+            var expectedResult = "DI";
 
             // Act
             var actualResult = converter.ToRomanNumeral(input);
