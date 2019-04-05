@@ -186,12 +186,42 @@ namespace SuperbowlNamer.Tests
         }
 
         [Fact]
-        public void convert_500_to_d()
+        public void convert_498_to_cdxcviii()
         {
             // Arrange
             var converter = new RomanNumeralConverter();
             var input = 498;
             var expectedResult = "CDXCVIII";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_500_to_d()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 500;
+            var expectedResult = "D";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void convert_501_to_di()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 501;
+            var expectedResult = "DI";
 
             // Act
             var actualResult = converter.ToRomanNumeral(input);
