@@ -169,5 +169,20 @@ namespace SuperbowlNamer.Tests
             // Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void convert_99_to_xcix()
+        {
+            // Arrange
+            var converter = new RomanNumeralConverter();
+            var input = 99;
+            var expectedResult = "XCIX";
+
+            // Act
+            var actualResult = converter.ToRomanNumeral(input);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
